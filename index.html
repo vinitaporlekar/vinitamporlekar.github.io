@@ -1,2 +1,135 @@
 <!DOCTYPE html>
-<!-- Full HTML content already inserted in canvas step -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinita Porlekar | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .typed-cursor { font-size: 1.5rem; color: #6366f1; }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+
+  <!-- Navigation -->
+  <header class="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Vinita Porlekar</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#resume" class="hover:text-indigo-600">Resume</a>
+        <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+        <button onclick="toggleTheme()" class="ml-4 px-3 py-1 border rounded text-sm">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center pt-24 px-6" id="home">
+    <div class="text-center" data-aos="fade-up">
+      <img src="profile.jpg" alt="Vinita Porlekar" class="w-40 h-40 mx-auto rounded-full border-4 border-indigo-500 mb-4" />
+      <h2 class="text-3xl font-bold">Hey, I'm Vinita Porlekar</h2>
+      <div class="text-xl text-indigo-600 mt-2">
+        <span id="typed"></span>
+      </div>
+      <p class="mt-4 text-gray-600 dark:text-gray-300">Scroll down to learn more about me ↓</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="max-w-4xl mx-auto py-20 px-6" id="about">
+    <h2 class="text-2xl font-bold mb-4">About Me</h2>
+    <p data-aos="fade-right">
+      I’m a results-driven Technical Project Manager with over 5 years of experience leading cross-functional teams and launching innovative AI, automation, and chatbot solutions. I'm passionate about optimizing processes and building impactful tech products.
+    </p>
+  </section>
+
+  <!-- Resume -->
+  <section class="bg-gray-50 dark:bg-gray-800 py-20 px-6" id="resume">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Resume</h2>
+      <p data-aos="fade-up">You can download my resume below or browse my experience and education.</p>
+      <a href="Vinita_Porlekar_Resume.pdf" download class="inline-block mt-4 px-5 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">📄 Download Resume</a>
+
+      <div class="mt-8" data-aos="fade-up">
+        <h3 class="font-semibold">Experience</h3>
+        <ul class="list-disc ml-6 mt-2 text-sm">
+          <li><strong>Tercera (Hurix Digital):</strong> Led $300K+ AI/e-learning projects, built Dictera and Hirezy platforms</li>
+          <li><strong>Haptik (Jio Platforms):</strong> Delivered enterprise chatbot solutions (Tira, JioMart, Mumbai Indians)</li>
+          <li><strong>Planet Next Gen:</strong> Managed automation for Foodland, McDonald’s, and PepsiCo</li>
+        </ul>
+        <h3 class="font-semibold mt-6">Education</h3>
+        <ul class="list-disc ml-6 mt-2 text-sm">
+          <li>M.S. Information Systems – Northeastern University (Sep 2025)</li>
+          <li>B.E. Computer Engineering – University of Mumbai</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="max-w-4xl mx-auto py-20 px-6" id="projects">
+    <h2 class="text-2xl font-bold mb-4">Projects</h2>
+    <ul class="grid md:grid-cols-2 gap-6" data-aos="fade-up">
+      <li class="p-4 border rounded shadow-sm bg-white dark:bg-gray-700">
+        <h4 class="font-semibold">Dictera</h4>
+        <p class="text-sm">An AI-based e-learning platform improving engagement by 80%.</p>
+      </li>
+      <li class="p-4 border rounded shadow-sm bg-white dark:bg-gray-700">
+        <h4 class="font-semibold">Job Ready</h4>
+        <p class="text-sm">AI-powered mock interview tool to boost placement readiness.</p>
+      </li>
+      <li class="p-4 border rounded shadow-sm bg-white dark:bg-gray-700">
+        <h4 class="font-semibold">Hirezy</h4>
+        <p class="text-sm">Recruitment dashboard reducing time-to-hire by 75%.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="bg-gray-50 dark:bg-gray-800 py-20 px-6" id="contact">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">Let's Connect</h2>
+      <p data-aos="fade-up">Have a question or want to work together? Email me below:</p>
+      <a href="mailto:vinitaporlekar2@gmail.com" class="inline-block mt-4 px-5 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">📧 vinitaporlekar2@gmail.com</a>
+    </div>
+  </section>
+
+  <footer class="text-center text-sm py-6 bg-white dark:bg-gray-900">
+    &copy; 2025 Vinita Porlekar. All rights reserved.
+  </footer>
+
+  <script>
+    AOS.init();
+    new Typed('#typed', {
+      strings: ["Technical Project Manager", "AI & Automation Specialist", "Certified Scrum Master"],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        html.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    }
+  </script>
+</body>
+</html>
